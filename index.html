@@ -1,8 +1,33 @@
 <html>
   <head>
-    <title>Hi!</title>
+    <title>data50090</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>This is a header!</h1>
+    <div class="blackbody"></div>
+    <p class="title hover popupAnim">Data's<br>personal website.</p>
+    <p class="title hover" style="font-size: 2vw; position: relative; color: rgb(98, 70, 143)">I'm a random guy who like programming and doing random stuff with it. <br><br>Scroll down to see more.</p>
+    <div class="container">
+      <div class="undertitle" id="undertitle">
+        <h1 class="title hover" style="color: white;">Wallpapers</h1>
+        <div class="container">
+            <div class="selectionbg">
+              <img src="Wallpaper1Logo.png" style="aspect-ratio: 1; width: 15vw; grid-row: 1/ span 3; grid-column: 1; height: auto; margin:auto">
+              <h1 class="title" style="grid-column: 2 / span 5; grid-row: 1; font-size: 4vw; height: auto; margin-top: 1vw; margin-left: 1vw;">Particle Wallpaper</h1>
+              <h1 class="title" style="grid-column: 2 / span 4; grid-row: 2; font-size: 1.5vw; height: auto; margin-top: 1vw; margin-left: 3vw;">Exist because I was experimenting with particles and it looks cool so I made it into a wallpaper with a couple of tweaks.</h1>
+              <button class="download hover" onclick="download('FlowingCubeWallpaper.png')">Download</button>
+            </div>
+            <br>
+            <div class="selectionbg">
+              <img src="thumbnailDayNightLineWallpaper.png" style="aspect-ratio: 1; width: 15vw; grid-row: 1/ span 3; grid-column: 1; height: auto; margin:auto">
+              <h1 class="title" style="grid-column: 2 / span 4; grid-row: 1; font-size: 3vw; height: auto; margin-top: 1vw; margin-left: 1vw;">DayNightLine Wallpaper</h1>
+              <h1 class="title" style="grid-column: 2 / span 4; grid-row: 2; font-size: 1.5vw; height: auto; margin-top: 1vw; margin-left: 3vw;">Lively Wallpaper I made for fun that can change between day and night with a button. (Installation instruction in the zip file)</h1>
+              <button class="download hover" onclick="download('WallpaperDayNightLine.zip')">Download</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
