@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Frameworks</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: rgb(250,250,255);
+    }
+    h1 {
+      color: #333;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    .card {
+      border: 1px solid #ddd;
+      background: rgb(255,255,255);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+      overflow: hidden;
+      transform: none;
+      transition: 0.5s;
+    }
+    .card img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      float: right;
+    }
+    .card h2 {
+      margin: 0 0 6px 0;
+    }
+    .card p {
+      margin: 0 0 10px 0;
+      color: #555;
+      font-size: 14px;
+    }
+    .badge {
+      transition: 0.5s;
+      display: inline-block;
+      background: #eee;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 12px;
+      margin-right: 4px;
+      color: rgb(15,15,15);
+    }
+    .s_hover {
+      transition: 0.2s;
+    }
+    .s_hover1 {
+      transition: 0.2s;
+    }
+    .s_hover:hover {
+      transform: translateX(10px) scale(102%);
+    }
+    .s_hover1:hover {
+      transform: translateX(10px) scale(105%);
+    }
+    
+    .hover:hover {
+      background: rgb(150,150,200);
+      color: rgb(255,255,255);
+      transform: translateY(0px) scale(105%);
+    }
+    .hover:hover .badge {
+      background: rgb(100,100,150);
+      color: rgb(255,255,255);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="s_hover1">JS <span style="color: rgb(150,150,200);">Frameworks</span></h1>
+  <h2 class="s_hover" style="font-size: 18px; color:rgb(150,150,150);">Modified by: Ghifari Mukti Wibowo</h2>
+  <h3 class="s_hover" style="font-size: 16px; color:rgb(150,150,150);">Class: X-1</h3>
+  <h4 class="s_hover" style="font-size: 14px; color:rgb(150,150,150);">What we learned: editing html, css, js, while learning some parts of how this website works. I modified this a bit to look better 😊</h4>
+  <h4 class="s_hover" style="font-size: 12px; color:rgb(150,150,150);">You can visit the websites by clicking the name of the framework.</h4>
+  <div id="list">Loading...</div>
+
+  <script>
+    async function loadFrameworks() {
+      var response = await fetch("https://pb-irc.artesparadox.net/api/collections/js_framework/records");
+      var data = await response.json();
+      var list = document.getElementById("list");
+      list.innerHTML = "";
+
+      data.items.forEach(function(fw) {
+        var link = "https://www.google.com/search?q=frameworkjs+" + fw.name + "&btnI=I%27m+Feeling+Lucky";
+        
+        list.innerHTML += "<div class='card hover' >" +
+          "<img src='" + fw.logo + "' alt='" + fw.name + "'>" +
+          '<h2><a href="' + link + '">' + fw.name + "</a></h2>" +
+          '<p style="color: inherit;">' + fw.description + "</p>" +
+          "<span class='badge'>Age: " + fw.age + "</span>" +
+          "<span class='badge'>Complexity: " + fw.complexity + "</span>" +
+          "</div>";
+      });
+    }
+
+    loadFrameworks();
+  </script>
+</body>
+</html>

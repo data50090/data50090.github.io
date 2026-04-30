@@ -10,7 +10,7 @@ body {
   margin-left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("bg.png");
+  background-image: url("assets/bg.png");
   background-size: cover;
 }
 .container {
@@ -127,3 +127,4 @@ body {
   color:rgb(249, 225, 255);
   font-size: 3vw;
 }
+

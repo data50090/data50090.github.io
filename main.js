@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
     progress = (document.body.scrollTop / ( document.body.scrollHeight - window.innerHeight ) ) * 100;
-    if (progress > 3) {
+    if (progress > 1.5) {
         document.getElementById("undertitle").style = "opacity: 1; transform: translateY(-10px)"
     } else {
         document.getElementById("undertitle").style = "opacity: 0; transform: translateY(0px)"
